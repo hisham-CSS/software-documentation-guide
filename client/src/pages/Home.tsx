@@ -9,26 +9,28 @@ export default function Home() {
     <div className="min-h-screen bg-background">
       {/* Header */}
       <header className="border-b border-border bg-card">
-        <div className="container py-6">
-          <div className="flex items-center gap-3 mb-2">
-            <BookOpen className="h-8 w-8 text-primary" />
-            <h1 className="text-3xl font-bold text-foreground">Software Documentation Guide</h1>
+        <div className="container py-4 md:py-6">
+          <div className="flex items-center gap-2 md:gap-3 mb-2">
+            <BookOpen className="h-6 w-6 md:h-8 md:w-8 text-primary flex-shrink-0" />
+            <h1 className="text-xl sm:text-2xl md:text-3xl font-bold text-foreground leading-tight">
+              Software Documentation Guide
+            </h1>
           </div>
-          <p className="text-muted-foreground text-lg">
+          <p className="text-muted-foreground text-sm sm:text-base md:text-lg">
             A comprehensive, professional-grade resource for creating exceptional software documentation
           </p>
         </div>
       </header>
 
       {/* Main Content */}
-      <main className="container py-8">
+      <main className="container py-6 md:py-8">
         <Tabs defaultValue="overview" className="w-full">
-          <TabsList className="grid w-full grid-cols-2 lg:grid-cols-5 mb-8">
-            <TabsTrigger value="overview">Overview</TabsTrigger>
-            <TabsTrigger value="best-practices">Best Practices</TabsTrigger>
-            <TabsTrigger value="types">Documentation Types</TabsTrigger>
-            <TabsTrigger value="examples">Examples</TabsTrigger>
-            <TabsTrigger value="resources">Resources</TabsTrigger>
+          <TabsList className="w-full mb-6 md:mb-8 h-auto flex-col sm:flex-row sm:inline-flex lg:grid lg:grid-cols-5">
+            <TabsTrigger value="overview" className="w-full sm:w-auto">Overview</TabsTrigger>
+            <TabsTrigger value="best-practices" className="w-full sm:w-auto">Best Practices</TabsTrigger>
+            <TabsTrigger value="types" className="w-full sm:w-auto">Documentation Types</TabsTrigger>
+            <TabsTrigger value="examples" className="w-full sm:w-auto">Examples</TabsTrigger>
+            <TabsTrigger value="resources" className="w-full sm:w-auto">Resources</TabsTrigger>
           </TabsList>
 
           {/* Overview Tab */}
